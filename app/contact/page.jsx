@@ -4,13 +4,13 @@ export const metadata = {
 };
 
 function ClinicLogo() {
-  return <a className="brand" href="/" aria-label="Dr Prabhu Centre home"><img className="clinic-logo" src="/clinic-logo.png.jpeg" alt="Dr Prabhu Orthopaedic & ENT Centre" /></a>;
+  return <a className="brand" href="/" aria-label="Dr Prabhu Centre home"><img className="clinic-logo" src="/images/clinic/clinic-logo.png.jpeg" alt="Dr Prabhu Orthopaedic & ENT Centre" /></a>;
 }
 
 export default function ContactPage() {
   return <main className="contact-page">
     <header className="profile-header shell"><ClinicLogo/><a className="profile-back" href="/">← Back to home</a></header>
-    <nav className="nav profile-nav"><div className="shell nav-inner"><a href="/">Home</a><a href="/doctors">Doctor Profile</a><a href="/#gallery">Gallery</a><a href="/#video">Video</a><a href="/#home-physio">Home Physio</a><a className="profile-nav-active" href="/contact">Contact</a><a className="online-consult-link" href="https://wa.me/917483108995?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20an%20online%20consultation." target="_blank" rel="noreferrer">Online Consultation ↗</a></div></nav>
+    <nav className="nav profile-nav"><div className="shell nav-inner"><a href="/">Home</a><a href="/doctors">Doctor Profile</a><a href="/gallery">Gallery</a><a href="/#video">Video</a><a href="/#home-physio">Home Physio</a><a className="profile-nav-active" href="/contact">Contact</a><a className="online-consult-link" href="https://wa.me/917483108995?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20an%20online%20consultation." target="_blank" rel="noreferrer">Online Consultation ↗</a></div></nav>
 
     <section className="contact-hero"><div className="shell contact-hero-inner"><span className="eyebrow">WE’RE HERE TO HELP</span><h1>Contact &amp; clinic timings</h1><p>Call ahead for appointments, ENT timings and Sunday availability.</p></div></section>
 
@@ -31,7 +31,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      <div className="contact-location-column"><div className="contact-section-heading"><span>03</span><h2>Find our centre</h2></div><div className="contact-map-card"><iframe title="Dr Prabhu Orthopaedic and ENT Centre location on Google Maps" src="https://maps.google.com/maps?q=12.873400,77.583298&z=17&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade"/><a className="map-open-link" href="https://maps.google.com/?q=12.873400,77.583298" target="_blank" rel="noreferrer">Open directions in Google Maps ↗</a></div><div className="contact-address"><span className="contact-detail-icon">⌖</span><div><small>Dr. Prabhu Orthopaedic &amp; ENT Centre</small><p>77/80, 2nd Main Road, Kothnur Dinne Main Road,<br/>near Keerthi Convention Hall, Rajathadri Layout,<br/>8th Phase, J.P. Nagar, Bengaluru 560078</p><a href="https://maps.google.com/?q=12.873400,77.583298" target="_blank" rel="noreferrer">12.873400, 77.583298 ↗</a></div></div></div>
+      <div className="contact-location-column"><div className="contact-section-heading"><span>03</span><h2>Find our centre</h2></div><div className="contact-map-card"><iframe title="Dr Prabhu Orthopaedic and ENT Centre location on Google Maps" src="https://maps.google.com/maps?q=12.873400,77.583298&z=17&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade"/><a className="map-open-link" href="https://maps.google.com/?q=12.873400,77.583298" target="_blank" rel="noreferrer">Open directions in Google Maps ↗</a></div><div className="contact-address"><span className="contact-detail-icon">⌖</span><div><small>Dr. Prabhu Orthopaedic &amp; ENT Centre</small><p>77/80, 2nd Main Road, Kothnur Dinne Main Road,<br/>near Keerthi Convention Hall, Rajathadri Layout,<br/>8th Phase, J.P. Nagar, Bengaluru 560076</p><a href="https://maps.google.com/?q=12.873400,77.583298" target="_blank" rel="noreferrer">12.873400, 77.583298 ↗</a></div></div><a className="location-qr" href="https://maps.google.com/?q=12.873400,77.583298" target="_blank" rel="noreferrer"><img src="/images/Qr.jpg" alt="Clinic location QR code"/><span>Scan for clinic location</span></a></div>
     </section>
 
     <footer className="profile-footer"><div className="shell"><ClinicLogo/><a href="/">Return to home page</a><small>© 2026 Dr Prabhu Orthopaedic &amp; ENT Centre</small></div></footer>

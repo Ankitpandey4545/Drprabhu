@@ -1,12 +1,12 @@
 export const metadata = {
   title: "Our Doctors | Dr. Prabhu Orthopaedic & ENT Centre",
-  description: "Meet Dr. Jagadish Prabhu, Sr. Consultant Orthopaedic Surgeon, and Dr. Shilpa Prabhu, Consultant ENT Surgeon.",
+  description: "Meet Dr. Jagadish Prabhu, Senior Consultant Orthopaedic Surgeon, and Dr. Shilpa Prabhu, Senior Consultant ENT Surgeon with 14 years of clinical experience.",
 };
 
 const qualifications = ["FRCS (Orth & Tr) (UK)", "MS (Orthopaedics)", "DNB (Orthopaedics)", "D.Ortho", "FHMS", "MBBS"];
 
 function ClinicLogo() {
-  return <a className="brand" href="/" aria-label="Dr Prabhu Centre home"><img className="clinic-logo" src="/clinic-logo.png.jpeg" alt="Dr Prabhu Orthopaedic & ENT Centre" /></a>;
+  return <a className="brand" href="/" aria-label="Dr Prabhu Centre home"><img className="clinic-logo" src="/images/clinic/clinic-logo.png.jpeg" alt="Dr Prabhu Orthopaedic & ENT Centre" /></a>;
 }
 
 function FeeCard({ doctor, specialty, firstVisit, followUps }) {
@@ -21,10 +21,10 @@ function FeeCard({ doctor, specialty, firstVisit, followUps }) {
 export default function JagadishPrabhuProfile() {
   return <main className="profile-page">
     <header className="profile-header shell"><ClinicLogo/><a className="profile-back" href="/">← Back to home</a></header>
-    <nav className="nav profile-nav"><div className="shell nav-inner"><a href="/">Home</a><a className="profile-nav-active" href="/doctors">Doctor Profile</a><a href="/#gallery">Gallery</a><a href="/#video">Video</a><a href="/#home-physio">Home Physio</a><a href="/contact">Contact</a><a className="online-consult-link" href="https://wa.me/917483108995?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20an%20online%20consultation." target="_blank" rel="noreferrer">Online Consultation ↗</a></div></nav>
+    <nav className="nav profile-nav"><div className="shell nav-inner"><a href="/">Home</a><a className="profile-nav-active" href="/doctors">Doctor Profile</a><a href="/gallery">Gallery</a><a href="/#video">Video</a><a href="/#home-physio">Home Physio</a><a href="/contact">Contact</a><a className="online-consult-link" href="https://wa.me/917483108995?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20an%20online%20consultation." target="_blank" rel="noreferrer">Online Consultation ↗</a></div></nav>
 
     <section className="profile-hero" id="dr-jagadish"><div className="shell profile-hero-grid">
-      <div className="profile-photo-wrap"><img className="profile-photo" src="/images/doctor-prabhu.jpeg" alt="Dr. Jagadish Prabhu, orthopaedic surgeon"/><span className="profile-photo-caption">Dr. Prabhu Orthopaedic &amp; ENT Centre</span></div>
+      <div className="profile-photo-wrap"><img className="profile-photo" src="/images/clinic/doctor-jagadish.jpeg" alt="Dr. Jagadish Prabhu, orthopaedic surgeon"/><span className="profile-photo-caption">Dr. Prabhu Orthopaedic &amp; ENT Centre</span></div>
       <div className="profile-hero-copy"><div className="profile-breadcrumb"><a href="/">Home</a><span>/</span><span>Doctor Profile</span></div>
         <span className="eyebrow">SR. CONSULTANT ORTHOPAEDIC SURGEON</span>
         <h1>Dr. Jagadish<br/>Prabhu</h1>
@@ -57,7 +57,22 @@ export default function JagadishPrabhuProfile() {
       </div>
     </div></section>
 
-    <section className="shilpa-profile" id="dr-shilpa"><div className="shell shilpa-profile-grid"><div className="shilpa-photo-wrap"><img src="/images/doctor-ent.jpg" alt="Dr. Shilpa Prabhu, ENT surgeon"/><span>EAR, NOSE &amp; THROAT CARE</span></div><div className="shilpa-profile-copy"><div className="profile-section-label"><span>03</span><span>ENT SPECIALIST</span></div><span className="eyebrow">CONSULTANT ENT SURGEON</span><h2>Dr. Shilpa<br/>Prabhu</h2><p className="shilpa-credentials">FRCS (ENT) <i/> MRCS (ENT) (UK) <i/> DLO <i/> DNB (ENT) <i/> MBBS</p><p>Dr. Shilpa Prabhu is a Consultant ENT Surgeon at Dr. Prabhu Orthopaedic and ENT Centre. Her practice focuses on ear, nose and throat care, with attention to clear assessment and treatment suited to each patient's needs.</p><a className="profile-secondary-action" href="/#contact">Contact the centre <span>↗</span></a></div></div></section>
+    <section className="shilpa-profile" id="dr-shilpa"><div className="shell">
+      <div className="shilpa-profile-grid"><div className="shilpa-photo-wrap"><img src="/images/clinic/doctor-shilpa.jpg" alt="Dr. Shilpa Prabhu, Senior Consultant ENT Surgeon"/><span>EAR, NOSE &amp; THROAT CARE</span></div><div className="shilpa-profile-copy"><div className="profile-section-label"><span>03</span><span>ENT SPECIALIST</span></div><span className="eyebrow">SENIOR CONSULTANT ENT SURGEON</span><h2>Dr. Shilpa<br/>Prabhu</h2><p className="shilpa-experience">14 Years of Clinical Experience</p><p className="shilpa-credentials">FRCS (ENT) (UK) <i/> MRCS-ENT <i/> DLO <i/> DNB (ENT) <i/> MBBS</p><a className="profile-secondary-action" href="/#contact">Contact the centre <span>↗</span></a></div></div>
+      <div className="shilpa-details"><div className="shilpa-biography"><span className="eyebrow">ABOUT DR. SHILPA PRABHU</span><p>Dr. Shilpa Prabhu is a highly experienced Senior Consultant ENT Surgeon with 14 years of clinical experience in the comprehensive diagnosis and management of Ear, Nose and Throat conditions.</p><p>With extensive clinical expertise and a patient-centred approach, she is committed to delivering high-quality, ethical and evidence-based ENT care. She believes in providing accurate diagnosis, effective treatment and personalised attention to every patient, ensuring comfort and confidence throughout their treatment journey.</p><p>She practises at Dr. Prabhu Orthopaedic and ENT Centre, J.P. Nagar 8th Phase, Bengaluru, and is also involved in providing specialised ENT care and procedures.</p></div>
+        <div className="shilpa-expertise"><div className="shilpa-details-heading"><span className="eyebrow">AREAS OF SPECIAL INTEREST AND EXPERTISE</span><h3>Specialist ENT care</h3></div><div className="shilpa-expertise-grid">
+          <article><h4>Ear, Nose and Throat Infections</h4><p>Diagnosis and comprehensive management of common and complex ENT infections.</p></article>
+          <article><h4>Ear Wax Removal</h4><p>Safe and professional ear wax removal procedures.</p></article>
+          <article><h4>Ear Piercing</h4><p>Professional ear piercing services.</p></article>
+          <article><h4>Ear Lobe Repair</h4><p>Management and repair of torn or split ear lobes.</p></article>
+          <article><h4>Vertigo and Balance Disorders</h4><p>Evaluation and management of dizziness, vertigo and balance-related problems.</p></article>
+          <article><h4>Tinnitus Management</h4><p>Assessment and treatment guidance for ringing or buzzing sensations in the ears.</p></article>
+          <article><h4>Snoring Disorders</h4><p>Evaluation and management of snoring-related ENT conditions.</p></article>
+          <article><h4>Foreign Body Removal</h4><p>Safe removal of foreign bodies from the ear, nose and throat.</p></article>
+        </div></div>
+        <div className="shilpa-philosophy"><span className="eyebrow">PHILOSOPHY OF CARE</span><p>Dr. Shilpa Prabhu strongly believes in combining clinical expertise with compassionate, individualised patient care. Her focus is on providing appropriate treatment, patient education and long-term ENT health through ethical and evidence-based medical practice.</p><strong>Expertise in ENT Care. Compassion in Every Consultation.</strong></div>
+      </div>
+    </div></section>
 
     <section className="profile-fees shell"><div className="profile-section-label"><span>04</span><span>CONSULTATION INFORMATION</span></div><div className="fees-heading"><div><h2>Consultation fees</h2><p>Clinic consultation and follow-up schedule</p></div><span>DR. PRABHU CENTRE</span></div>
       <div className="fee-grid"><FeeCard doctor="Dr. Jagadish Prabhu" specialty="Orthopaedic Surgeon" firstVisit="₹550" followUps={[["1–4 days", "Nil"], ["5–9 days", "₹400"], ["After 9 days", "₹550"]]} /><FeeCard doctor="Dr. Shilpa Prabhu" specialty="ENT Surgeon" firstVisit="₹400" followUps={[["1–4 days", "Nil"], ["5–9 days", "₹300"], ["After 9 days", "₹400"]]} /></div>
