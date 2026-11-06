@@ -30,7 +30,7 @@ const questions = [
   },
 ];
 
-export default function FAQSection() {
+export default function FAQSection({ items = questions }) {
   const [openIndex, setOpenIndex] = useState(0);
   const reduceMotion = useReducedMotion();
 
@@ -43,15 +43,15 @@ export default function FAQSection() {
         <a href="#contact" className="faq-contact">Still have a question? <span>Contact us ↗</span></a>
       </div>
       <div className="faq-list">
-        {questions.map(({ question, answer }, index) => {
+        {items.map(({ question, answer }, index) => {
           const isOpen = openIndex === index;
           const panelId = `faq-answer-${index + 1}`;
           return <article className={`faq-item ${isOpen ? "is-open" : ""}`} key={question}>
-            <button className="faq-question" type="button" aria-expanded={isOpen} aria-controls={panelId} onClick={() => setOpenIndex(isOpen ? -1 : index)}>
-              <span>{question}</span><motion.i animate={{ rotate: isOpen ? 45 : 0 }} transition={{ duration: reduceMotion ? 0 : 0.2 }}>+</motion.i>
+            <button className="faq-question" id={`faq-question-${index + 1}`} type="button" aria-expanded={isOpen} aria-controls={panelId} onClick={() => setOpenIndex(isOpen ? -1 : index)}>
+              <span className="faq-number">{String(index + 1).padStart(2, "0")}</span><span className="faq-question-text">{question}</span><motion.i aria-hidden="true" animate={{ rotate: isOpen ? 45 : 0 }} transition={{ duration: reduceMotion ? 0 : 0.2 }}>+</motion.i>
             </button>
             <AnimatePresence initial={false}>
-              {isOpen && <motion.div className="faq-answer-wrap" id={panelId} initial={reduceMotion ? false : { height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: reduceMotion ? 0 : 0.25, ease: "easeOut" }}>
+              {isOpen && <motion.div className="faq-answer-wrap" id={panelId} role="region" aria-labelledby={`faq-question-${index + 1}`} initial={reduceMotion ? false : { height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: reduceMotion ? 0 : 0.25, ease: "easeOut" }}>
                 <p>{answer}</p>
               </motion.div>}
             </AnimatePresence>

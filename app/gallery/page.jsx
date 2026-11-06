@@ -1,5 +1,6 @@
 import { readdirSync } from "node:fs";
 import path from "node:path";
+import { getSiteContent } from "../../lib/site-content.js";
 
 export const metadata = {
   title: "Gallery | Dr. Prabhu Orthopaedic & ENT Centre",
@@ -45,14 +46,11 @@ const categories = [
   },
   {
     id: "clinic-gallery",
-    folder: "clinic",
+    folder: "clinic-gallery",
     label: "Clinic",
     eyebrow: "OUR CENTRE & DOCTORS",
-    titles: {
-      "doctor-jagadish.jpeg": "Dr. Jagadish Prabhu",
-      "doctor-shilpa.jpg": "Dr. Shilpa Prabhu",
-      "clinic-logo.png.jpeg": "Dr. Prabhu Centre logo",
-    },
+    titles: {},
+    emptyMessage: "Clinic images can be added from the admin panel.",
   },
 ];
 
@@ -75,14 +73,14 @@ function listImages(folder, titles) {
   });
 }
 
-function ClinicLogo() {
-  return <a className="brand" href="/" aria-label="Dr Prabhu Centre home"><img className="clinic-logo" src="/images/clinic/clinic-logo.png.jpeg" alt="Dr Prabhu Orthopaedic & ENT Centre"/></a>;
+function ClinicLogo({ src }) {
+  return <a className="brand" href="/" aria-label="Dr Prabhu Centre home"><img className="clinic-logo" src={src} alt="Dr Prabhu Orthopaedic & ENT Centre"/></a>;
 }
 
 function GallerySection({ category, images }) {
   return <section className="gallery-section" id={category.id}>
     <div className="gallery-section-heading"><div><span className="eyebrow">{category.eyebrow}</span><h2>{category.label} gallery</h2></div><span>{images.length} images</span></div>
-    {images.length ? <div className="gallery-grid">{images.map(({ title, alt, src }) => <figure className="gallery-card" key={src}><div className="gallery-image-wrap"><img src={src} alt={alt} loading="lazy"/></div><figcaption>{title}</figcaption></figure>)}</div> : <p className="gallery-empty">Images added to this folder will appear here.</p>}
+    {images.length ? <div className="gallery-grid">{images.map(({ title, alt, src }) => <figure className="gallery-card" key={src}><div className="gallery-image-wrap"><img src={src} alt={alt} loading="lazy"/></div><figcaption>{title}</figcaption></figure>)}</div> : <p className="gallery-empty">{category.emptyMessage || "Images added to this folder will appear here."}</p>}
   </section>;
 }
 
@@ -94,16 +92,20 @@ function FolderCard({ category, images }) {
   </a>;
 }
 
-export default function GalleryPage() {
+export const dynamic = "force-dynamic";
+
+export default async function GalleryPage() {
+  const content = await getSiteContent();
+  const consultationLink = `https://wa.me/${content.contact.whatsappLink}?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20an%20online%20consultation.`;
   const folders = categories.map((category) => ({ category, images: listImages(category.folder, category.titles) }));
 
   return <main className="gallery-page">
-    <header className="profile-header shell"><ClinicLogo/><a className="profile-back" href="/">← Back to home</a></header>
-    <nav className="nav profile-nav"><div className="shell nav-inner"><a href="/">Home</a><a href="/doctors">Doctor Profile</a><a className="profile-nav-active" href="/gallery">Gallery</a><a href="/#video">Video</a><a href="/#home-physio">Home Physio</a><a href="/contact">Contact</a><a className="online-consult-link" href="https://wa.me/917483108995?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20an%20online%20consultation." target="_blank" rel="noreferrer">Online Consultation ↗</a></div></nav>
+    <header className="profile-header shell"><ClinicLogo src={content.home.brandLogo}/><a className="profile-back" href="/">← Back to home</a></header>
+    <nav className="nav profile-nav"><div className="shell nav-inner"><a href="/">Home</a><a href="/doctors">Doctor Profile</a><a className="profile-nav-active" href="/gallery">Gallery</a><a href="/video">Video</a><a href="/home-physio">Home Physio</a><a href="/contact">Contact</a><a href="/timings">Clinic Timings</a><a href="/fees">Consultation Fees</a><a className="online-consult-link" href={consultationLink} target="_blank" rel="noreferrer">Online Consultation ↗</a></div></nav>
     <section className="gallery-hero"><div className="shell"><span className="eyebrow">DR. PRABHU ORTHOPAEDIC &amp; ENT CENTRE</span><h1>Explore our gallery</h1><p>Choose a folder to browse related centre, Orthopaedic or ENT images.</p></div></section>
     <section className="shell gallery-folder-section" aria-label="Gallery folders"><div className="gallery-folder-grid">{folders.map(({ category, images }) => <FolderCard key={category.folder} category={category} images={images}/>)}</div></section>
     <div className="shell gallery-content">{folders.map(({ category, images }) => <GallerySection key={category.folder} category={category} images={images}/>)}</div>
     <section className="gallery-contact"><div className="shell gallery-contact-inner"><div><span className="eyebrow">WE’RE HERE TO HELP</span><h2>Need more information?</h2></div><a href="/contact">Contact the centre <span>↗</span></a></div></section>
-    <footer className="profile-footer"><div className="shell"><ClinicLogo/><a href="/">Return to home page</a><small>© 2026 Dr Prabhu Orthopaedic &amp; ENT Centre</small></div></footer>
+    <footer className="profile-footer"><div className="shell"><ClinicLogo src={content.home.brandLogo}/><a href="/">Return to home page</a><small>© 2026 Dr Prabhu Orthopaedic &amp; ENT Centre</small></div></footer>
   </main>;
 }

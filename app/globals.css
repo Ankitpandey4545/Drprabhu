@@ -32,6 +32,67 @@
 @media(max-width:600px){.masthead{height:auto;min-height:0;grid-template-columns:1fr 1fr;gap:0 10px;padding-top:0}.mast-logo{grid-column:1/-1;grid-row:1;height:110px;border:0;border-bottom:1px solid #edf0f1;flex-direction:row;gap:12px}.mast-logo .brand{flex-direction:row;gap:8px}.mast-logo .clinic-logo{width:220px;height:108px}.mast-doctor,.mast-right{height:auto;min-height:190px;flex-direction:column;justify-content:flex-end;align-items:center;gap:5px;padding:8px 0 13px;text-align:center}.mast-doctor>.portrait{width:78px;height:102px;align-self:center}.mast-doctor>div:not(.portrait){align-items:center}.mast-doctor .eyebrow{font-size:6px;letter-spacing:.07em}.mast-doctor strong{font-size:11px}.mast-doctor small{font-size:8px;max-width:none}.nav-inner{height:49px}}
 .ent-section{position:relative;overflow:hidden;padding:60px 0 52px;background:radial-gradient(ellipse at 12% 0%,rgba(248,232,208,.55),transparent 35%),#fff;border-bottom:1px solid #edf0ed;scroll-margin-top:20px}.ent-section>.shell{position:relative}.ent-section .ortho-heading h2{font:800 clamp(29px,3.7vw,40px)/1.15 Manrope,sans-serif;letter-spacing:-.045em;margin:10px 0 8px;color:var(--ink)}.ent-section .ortho-heading-mark{color:#fff;background:var(--orange);box-shadow:0 10px 26px rgba(244,119,33,.18)}.ent-section .ortho-poster{background:#fffaf3}.ent-section .ortho-poster>img{background:#fffaf3}.ent-section .ortho-placeholder{background:linear-gradient(135deg,#fff3df,#f5dfc4);color:#9b713d}.ent-section .ortho-gallery-actions .carousel-controls button:last-child{background:var(--orange);border-color:var(--orange)}.ent-section .ortho-progress i{background:var(--orange)}
 @media(max-width:600px){.ent-section{padding:42px 0 35px}.ent-section .ortho-heading h2{font-size:27px}.ent-section .ortho-heading p{font-size:11px;line-height:1.6}}
+
+.admin-page{min-height:100vh;background:#f0f6f9;color:#152e46;font-family:Inter,'Segoe UI',sans-serif}
+.admin-login-wrap{min-height:100vh;display:grid;place-items:center;padding:24px;background:radial-gradient(circle at 15% 15%,#e0f1f8,transparent 34%),linear-gradient(130deg,#f4f8fa,#fff7ef)}
+.admin-login{width:min(440px,100%);padding:36px;border:1px solid #deeaee;border-radius:14px;background:#fff;box-shadow:0 24px 70px rgba(21,46,70,.12)}
+.admin-back{display:inline-block;margin-bottom:30px;color:#117eb8;text-decoration:none;font-size:13px;font-weight:600}
+.admin-eyebrow{color:#1680aa;font-size:11px;font-weight:700;letter-spacing:.13em}
+.admin-login h1,.admin-content-heading h1{font:800 32px/1.2 Manrope,sans-serif;letter-spacing:-.04em;margin:9px 0;color:#152e46}
+.admin-login>p,.admin-content-heading p{font-size:14px;line-height:1.65;color:#6b7f89}
+.admin-login>label,.admin-field>label,.admin-upload-settings label{display:flex;flex-direction:column;gap:8px;color:#344f60;font-size:13px;font-weight:700}
+.admin-login input,.admin-field input,.admin-field textarea,.admin-field select,.admin-upload-settings select,.admin-list-editor input{width:100%;padding:11px 12px;border:1px solid #d7e3e8;border-radius:6px;background:#fff;color:#203b4d;font:14px Inter,sans-serif;outline:none}
+.admin-login input:focus,.admin-field input:focus,.admin-field textarea:focus,.admin-field select:focus,.admin-upload-settings select:focus,.admin-list-editor input:focus{border-color:#1988b3;box-shadow:0 0 0 3px rgba(25,136,179,.12)}
+.admin-login>button,.admin-save{border:0;border-radius:6px;padding:12px 18px;background:#117eb8;color:white;font-size:13px;font-weight:700;cursor:pointer}
+.admin-login>button{width:100%;margin-top:18px}
+.admin-login button:disabled,.admin-save:disabled{opacity:.6;cursor:wait}
+.admin-login>small{display:block;margin-top:22px;color:#80909a;font-size:12px;line-height:1.6}
+.admin-login code{color:#234b62}
+.admin-shell{min-height:100vh}
+.admin-header{height:70px;padding:0 max(28px,calc((100vw - 1440px)/2));display:flex;align-items:center;justify-content:space-between;background:#123552;color:#fff}
+.admin-brand{display:flex;align-items:center;gap:15px;color:#fff;text-decoration:none;font:800 17px Manrope,sans-serif}
+.admin-brand span{padding-left:15px;border-left:1px solid #ffffff33;color:#b8ced8;font:500 12px Inter,sans-serif}
+.admin-header>div{display:flex;align-items:center;gap:18px}.admin-header a:not(.admin-brand){color:#d6e4e9;text-decoration:none;font-size:13px}
+.admin-header button,.admin-array-heading button{border:1px solid #ffffff44;border-radius:5px;padding:8px 12px;background:transparent;color:#fff;font-size:12px;cursor:pointer}
+.admin-body{width:min(1440px,100%);min-height:calc(100vh - 70px);margin:auto;display:grid;grid-template-columns:260px minmax(0,1fr);background:#f8fbfc}
+.admin-sidebar{padding:27px 17px;border-right:1px solid #dfebef;background:#f2f7f9}
+.admin-sidebar>.admin-eyebrow{display:block;margin:4px 10px 16px}
+.admin-sidebar>button,.admin-sidebar>.admin-side-link{width:100%;display:flex;justify-content:space-between;align-items:center;padding:12px 13px;border:0;border-radius:6px;background:transparent;color:#516c7b;text-align:left;text-decoration:none;font:13px Inter,sans-serif;cursor:pointer}
+.admin-sidebar>button:hover,.admin-sidebar>button.active,.admin-sidebar>.admin-side-link:hover,.admin-sidebar>.admin-side-link.active{background:#e2f1f7;color:#0877a6;font-weight:700}
+.admin-sidebar>button span,.admin-sidebar>.admin-side-link span{font-size:18px}
+.admin-upload-settings{margin:30px 6px 0;padding:16px 12px;border:1px solid #dce9ed;border-radius:8px;background:#fff}
+.admin-upload-settings label{font-size:12px}.admin-upload-settings select{padding:9px;font-size:12px}.admin-upload-settings p{font-size:11px;line-height:1.5;color:#83939b}
+.admin-content{min-width:0;padding:36px clamp(20px,4vw,58px) 70px}
+.admin-content-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:24px;padding-bottom:21px;border-bottom:1px solid #e1ebef}
+.admin-content-heading h1{font-size:30px}.admin-content-heading p{margin:0}
+.admin-message{margin:0 0 20px;padding:12px 14px;border:1px solid #cde6d8;border-radius:6px;background:#eef9f2;color:#287049;font-size:13px;line-height:1.5}
+.admin-group,.admin-array{min-width:0;margin:0 0 20px;padding:20px;border:1px solid #dce8ec;border-radius:9px;background:#fff;box-shadow:0 5px 18px rgba(21,46,70,.035)}
+.admin-group>legend,.admin-array>legend{padding:0 8px;color:#234a60;font:700 16px Manrope,sans-serif}
+.admin-group-fields{display:grid;grid-template-columns:1fr 1fr;gap:17px 20px}
+.admin-field{min-width:0;display:flex;flex-direction:column;gap:8px;margin:0 0 14px}
+.admin-field>label{font-size:12px}.admin-field textarea{resize:vertical;line-height:1.6}.admin-field>small{color:#84949d;font-size:11px;line-height:1.5}
+.admin-field:has(textarea),.admin-field:has(.admin-image-tools),.admin-field:has(.admin-list-editor){grid-column:1/-1}
+.admin-array-item{margin:0 0 14px;padding:16px;border:1px solid #e3ecef;border-radius:7px;background:#f9fbfc}
+.admin-array-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;color:#476475;font-size:13px}
+.admin-array-heading>span{display:flex;gap:5px}.admin-array-heading button{border-color:#d5e4e9;color:#3e687e;background:#fff}.admin-array-heading button:last-child{border-color:#e2caca;color:#a54f4f}
+.admin-array-heading button:disabled,.admin-list-editor button:disabled{opacity:.4;cursor:default}
+.admin-add{border:1px dashed #a8c8d6;border-radius:5px;padding:10px 13px;background:#f0f8fb;color:#157da5;font-size:12px;font-weight:700;cursor:pointer}
+.admin-list-editor{display:flex;flex-direction:column;gap:8px}.admin-list-editor>div{display:flex;gap:7px}.admin-list-editor>div button{width:40px;border:1px solid #d5e4e9;border-radius:5px;background:#fff;color:#426c80;font-size:16px;cursor:pointer}.admin-list-editor>div button:last-child{border-color:#ecd5d5;color:#a34949;font-size:20px}
+.admin-image-tools{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-top:5px}
+.admin-image-tools>img{width:90px;height:70px;object-fit:cover;border:1px solid #e0e9ec;border-radius:5px;background:#f3f7f8}
+.admin-image-tools code{max-width:100%;overflow-wrap:anywhere;color:#70848f;font-size:11px}
+.admin-upload-button{display:inline-flex;align-items:center;position:relative;padding:9px 12px;border:1px solid #bdd8e3;border-radius:5px;background:#f1f8fb;color:#137da5;font-size:12px;font-weight:700;cursor:pointer}
+.admin-upload-button input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.admin-gallery-upload{width:100%;justify-content:center;margin-top:10px}
+.home-physio-content{min-height:60vh}
+.physio-video-grid{display:grid;grid-template-columns:1fr;gap:25px;width:min(950px,100%);margin:28px auto 0;text-align:left}
+.physio-video-card{overflow:hidden;border:1px solid #d7e6eb;border-radius:9px;background:#fff;box-shadow:0 10px 30px rgba(21,46,70,.07)}
+.physio-video-card .clinic-video-frame{width:100%;margin:0;border:0;border-radius:0;box-shadow:none}
+.physio-video-copy{padding:17px 20px 21px}
+.physio-video-copy h2{font:700 18px/1.35 Manrope,sans-serif;margin:0;color:var(--ink)}
+.physio-video-copy>p{margin:7px 0 0;color:#6d818c;font-size:14px}
+@media(max-width:800px){.admin-body{grid-template-columns:1fr}.admin-sidebar{display:flex;gap:7px;overflow-x:auto;padding:12px;border-right:0;border-bottom:1px solid #dfebef}.admin-sidebar>.admin-eyebrow{display:none}.admin-upload-settings{display:flex;align-items:center;gap:8px;flex:none;margin:0;padding:5px;border:0;background:transparent}.admin-upload-settings>label:first-child{display:block;min-width:140px}.admin-upload-settings>label:first-child select{font-size:11px;padding:8px}.admin-upload-settings>p{display:none}.admin-gallery-upload{width:auto;margin:0;white-space:nowrap;padding:9px}.admin-sidebar>button,.admin-sidebar>.admin-side-link{width:auto;flex:none;white-space:nowrap}.admin-content{padding-top:25px}}
+@media(max-width:600px){.admin-header{height:60px;padding:0 14px}.admin-brand{font-size:14px}.admin-brand span{font-size:10px}.admin-header>div{gap:10px}.admin-header a:not(.admin-brand){font-size:11px}.admin-header button{font-size:11px;padding:7px 9px}.admin-content-heading{align-items:flex-start;flex-direction:column}.admin-content-heading h1{font-size:25px}.admin-group,.admin-array{padding:14px}.admin-group-fields{grid-template-columns:1fr;gap:10px}.admin-field:has(textarea),.admin-field:has(.admin-image-tools),.admin-field:has(.admin-list-editor){grid-column:auto}.admin-login{padding:27px 22px}}
 .faq-section{padding:76px 0 72px;background:#f7f9f8;border-top:1px solid #edf0ed}.faq-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(35px,8vw,110px)}.faq-intro h2{font:800 clamp(29px,3.6vw,40px)/1.12 Manrope,sans-serif;letter-spacing:-.045em;margin:12px 0}.faq-intro>p{font-size:12px;color:var(--muted);line-height:1.7;max-width:280px}.faq-contact{display:inline-flex;flex-direction:column;gap:7px;margin-top:18px;text-decoration:none;color:#87979d;font-size:10px}.faq-contact span{font-weight:700;color:var(--blue)}.faq-list{border-top:1px solid #dfe7e6}.faq-item{border-bottom:1px solid #dfe7e6}.faq-question{width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 1px;border:0;background:none;text-align:left;color:var(--ink);font:600 13px Manrope,sans-serif;cursor:pointer}.faq-question i{width:28px;height:28px;flex:none;border:1px solid #dce6e6;border-radius:50%;display:grid;place-items:center;font:400 19px 'DM Sans',sans-serif;color:var(--blue);font-style:normal}.faq-item.is-open .faq-question{color:var(--blue)}.faq-answer-wrap{overflow:hidden}.faq-answer-wrap p{max-width:600px;margin:0;padding:0 42px 18px 1px;font-size:11px;line-height:1.8;color:#6d7f88}
 @media(max-width:700px){.faq-section{padding:48px 0 46px}.faq-layout{grid-template-columns:1fr;gap:25px}.faq-intro h2{font-size:29px}.faq-intro>p{max-width:none}.faq-contact{margin-top:8px}.faq-question{font-size:12px;padding:16px 1px}.faq-answer-wrap p{font-size:10px}}
 .patient-proof{background:#fff;border-bottom:1px solid #edf0ed}.patient-proof-inner{min-height:88px;display:flex;align-items:center;gap:15px}.patient-proof-icon{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#edf6f7;color:var(--blue);font-size:20px}.patient-proof-copy{display:flex;flex-direction:column;gap:4px}.patient-proof-copy>span{font-size:8px;letter-spacing:.15em;font-weight:700;color:#91a0a5}.patient-proof-copy p{font-size:12px;color:var(--ink);font-weight:600;margin:0}.patient-proof-count{margin-left:auto;display:flex;align-items:baseline;color:var(--blue);font:800 30px/1 Manrope,sans-serif;letter-spacing:-.05em;overflow:hidden}.patient-proof-count>span{display:inline-block;font-variant-numeric:tabular-nums}.patient-proof-count b{font-size:18px;margin-left:3px;color:var(--orange)}.patient-proof-note{font-size:10px;color:#85959b;margin-left:12px;padding-left:18px;border-left:1px solid #e1e8e8}
@@ -117,3 +178,40 @@ p{line-height:1.75}
 .card-info p,.footer-details>p,.contact-address p,.contact-hero p,.gallery-hero p,.fees-heading p,.fee-note,.timing-hours,.sunday-note p{font-size:13px;line-height:1.65}
 .contact-detail-card small,.contact-section-heading>span,.eyebrow,.profile-section-label,.gallery-folder-meta>div>span{font-size:11px}
 @media(max-width:600px){body{font-size:15px}.feature-copy p,.ortho-heading p,.contact-hero p,.gallery-hero p,.profile-bio p,.qualification-intro>p,.qualification-block>p,.shilpa-profile-copy>p:not(.shilpa-credentials),.shilpa-biography>p,.shilpa-philosophy>p,.shilpa-expertise-grid p,.facility-card p,.faq-answer{font-size:14px}.nav a,.profile-nav .nav a{font-size:12px}}
+.faq-section{padding:82px 0;background:linear-gradient(120deg,#edf6fa,#fff8f0 52%,#edf6fa);border-top:1px solid #deebf0}
+.faq-layout{grid-template-columns:.72fr 1.28fr;gap:clamp(38px,7vw,96px);align-items:start}
+.faq-intro{position:sticky;top:32px}
+.faq-intro>.eyebrow{display:inline-flex;padding:8px 11px;border-radius:999px;background:#e3f2f8;color:#117eb8;letter-spacing:.11em}
+.faq-intro h2{font-size:clamp(32px,3.8vw,44px);line-height:1.08;margin:16px 0}
+.faq-intro>p{font-size:15px;line-height:1.7;max-width:300px}
+.faq-contact{display:inline-flex;flex-direction:row;align-items:center;gap:12px;margin-top:18px;padding:13px 16px;border:1px solid #cde1ea;border-radius:5px;background:#fff;color:#526b78;font-size:12px}
+.faq-contact span{color:var(--blue)}
+.faq-list{display:flex;flex-direction:column;gap:10px;border:0}
+.faq-item{overflow:hidden;border:1px solid #dfe9ed;border-radius:8px;background:rgba(255,255,255,.88);box-shadow:0 5px 18px rgba(21,46,70,.035);transition:border-color .2s,box-shadow .2s}
+.faq-item.is-open{border-color:#a9d2e3;box-shadow:0 12px 28px rgba(17,126,184,.09)}
+.faq-question{min-height:66px;padding:15px 18px;gap:14px;font:600 15px/1.5 Manrope,sans-serif}
+.faq-number{flex:none;color:#91a6b0;font:700 11px/1 Inter,sans-serif;letter-spacing:.05em}
+.faq-question-text{flex:1}
+.faq-question i{width:32px;height:32px;background:#f0f7fa;border-color:#dbe9ee;font-family:Inter,sans-serif}
+.faq-item.is-open .faq-question i{background:#117eb8;border-color:#117eb8;color:#fff}
+.faq-answer-wrap p{max-width:unset;padding:0 58px 20px 44px;font-size:14px;line-height:1.8;color:#5e737f}
+@media(max-width:700px){.faq-section{padding:52px 0}.faq-layout{grid-template-columns:1fr;gap:24px}.faq-intro{position:static}.faq-intro h2{font-size:32px}.faq-contact{margin-top:10px}.faq-question{min-height:60px;padding:14px 13px;font-size:14px;gap:10px}.faq-answer-wrap p{padding:0 15px 17px 37px;font-size:14px}}
+
+@media(max-width:1100px){.nav-inner{overflow-x:auto;scrollbar-width:thin}.nav-inner>.nav a,.nav-inner>a{flex:none}}
+.timings-page-content{max-width:780px;padding-top:42px;padding-bottom:64px}
+.contact-whatsapp .contact-detail-icon svg{display:block;width:19px;height:19px;fill:currentColor}
+.timings-page-content>.timing-card{margin-bottom:0}
+.timings-ent-heading{margin-top:34px}
+.timings-contact-link{display:inline-flex;align-items:center;gap:14px;margin-top:22px;color:var(--blue);font-size:13px;font-weight:700;text-decoration:none}
+.timings-contact-link span{font-size:17px}
+.fees-page-content{min-height:58vh}
+.fees-page-content>.profile-section-label{margin-bottom:22px}
+.clinic-video-section{padding:58px 0 64px;background:linear-gradient(125deg,#eaf5fa,#fff6ec);border-top:1px solid #deebef;border-bottom:1px solid #deebef;text-align:center;scroll-margin-top:20px}
+.clinic-video-section h1,.clinic-video-section h2{margin:8px 0;font:800 clamp(28px,3.5vw,38px)/1.2 Manrope,sans-serif;color:var(--ink)}
+.clinic-video-section>.shell>p{margin:0;color:#6d818c;font-size:15px}
+.clinic-video-frame{width:min(900px,100%);aspect-ratio:16/9;margin:26px auto 0;overflow:hidden;border:1px solid #d3e3e9;border-radius:10px;background:#112d40;box-shadow:0 16px 40px rgba(21,46,70,.12)}
+.clinic-video-frame video{display:block;width:100%;height:100%;object-fit:contain}
+.clinic-video-empty{width:min(900px,100%);min-height:180px;display:grid;place-items:center;margin:26px auto 0;padding:25px;border:1px dashed #b7d2de;border-radius:9px;background:#ffffff9c;color:#5c7888;font-size:14px}
+.admin-video-tools{display:flex;flex-direction:column;align-items:flex-start;gap:11px;margin-top:10px}.admin-video-tools video{display:block;width:min(100%,520px);max-height:300px;border-radius:7px;background:#132e40}.admin-video-tools small{color:#82939b;font-size:11px}
+@media(max-width:700px){.timings-page-content{padding-top:30px;padding-bottom:44px}}
+@media(max-width:600px){.clinic-video-section{padding:40px 0 44px}.clinic-video-empty{min-height:130px;font-size:13px}}

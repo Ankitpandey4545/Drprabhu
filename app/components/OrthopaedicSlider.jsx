@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { useState } from "react";
 
-const images = [
+const imageDetails = [
   ["Joint replacement", "Joint replacement surgery and recovery"],
   ["Tennis elbow", "Tennis elbow treatment and rehabilitation"],
   ["Arthroscopy", "Arthroscopy and minimally invasive joint care"],
@@ -15,17 +15,29 @@ const images = [
   ["Frozen shoulder", "Frozen shoulder care and mobility"],
   ["Heel pain", "Plantar fasciitis and heel pain care"],
   ["Cast care", "Cast application and recovery support"],
-].map(([title, alt], index) => ({
-  src: `/images/orthopaedic/ortho-${String(index + 1).padStart(2, "0")}.jpg`,
-  alt,
-  title,
-  number: String(index + 1).padStart(2, "0"),
-}));
+];
 
-export default function OrthopaedicSlider() {
+const defaultOrder = [1, 3, 9, 8, 2, 4, 5, 6, 7, 10];
+
+function getImages(section) {
+  const order = section?.order || defaultOrder;
+  return order.map((imageNumber) => {
+  const configured = section?.items?.[imageNumber - 1];
+  const [title, alt] = imageDetails[imageNumber - 1];
+  return {
+    src: configured?.image || `/images/orthopaedic/ortho-${String(imageNumber).padStart(2, "0")}.jpg`,
+    alt: configured?.alt || alt,
+    title: configured?.title || title,
+    number: String(imageNumber).padStart(2, "0"),
+  };
+});
+}
+
+export default function OrthopaedicSlider({ section }) {
   const trackRef = useRef(null);
   const [activeImage, setActiveImage] = useState(1);
   const reduceMotion = useReducedMotion();
+  const images = getImages(section);
 
   function move(direction) {
     const track = trackRef.current;
@@ -45,7 +57,7 @@ export default function OrthopaedicSlider() {
   }
 
   return <div className="ortho-gallery">
-    <div className="ortho-gallery-top"><div><span className="ortho-kicker">SPECIALIST CARE, MADE CLEAR</span><p>Explore our orthopaedic care</p></div><div className="ortho-gallery-actions"><div className="carousel-controls"><motion.button type="button" disabled={activeImage <= 1} whileTap={{ scale: 0.9 }} onClick={() => move(-1)} aria-label="Previous orthopaedic images">←</motion.button><motion.button type="button" disabled={activeImage >= images.length} whileTap={{ scale: 0.9 }} onClick={() => move(1)} aria-label="Next orthopaedic images">→</motion.button></div></div></div>
+    <div className="ortho-gallery-top"><div><span className="ortho-kicker">SPECIALIST CARE, MADE CLEAR</span><p>{section?.description || "Explore our orthopaedic care"}</p></div><div className="ortho-gallery-actions"><div className="carousel-controls"><motion.button type="button" disabled={activeImage <= 1} whileTap={{ scale: 0.9 }} onClick={() => move(-1)} aria-label="Previous orthopaedic images">←</motion.button><motion.button type="button" disabled={activeImage >= images.length} whileTap={{ scale: 0.9 }} onClick={() => move(1)} aria-label="Next orthopaedic images">→</motion.button></div></div></div>
     <div className="ortho-track" ref={trackRef} onScroll={updateActiveImage}>
       {images.map(({ src, alt, number, title }, index) => <motion.article className="ortho-slide" key={number}
         initial={reduceMotion ? false : { opacity: 0, y: 22 }}

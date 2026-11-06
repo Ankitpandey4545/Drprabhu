@@ -3,27 +3,28 @@
 import { useEffect, useRef, useState } from "react";
 import { animate, motion, useInView, useReducedMotion } from "framer-motion";
 
-export default function PatientCounter() {
+export default function PatientCounter({ initialCount = 20138 }) {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.4 });
-  const [count, setCount] = useState(19_989);
+  const targetCount = Number(initialCount) || 20138;
+  const [count, setCount] = useState(targetCount - 11);
   const reduceMotion = useReducedMotion();
 
   useEffect(() => {
     if (!isInView) return;
     if (reduceMotion) {
-      setCount(20_000);
+      setCount(targetCount);
       return;
     }
 
-    const controls = animate(19_989, 20_000, {
+    const controls = animate(targetCount - 11, targetCount, {
       duration: 1.8,
       ease: "linear",
       onUpdate: (value) => setCount(Math.floor(value)),
     });
 
     return () => controls.stop();
-  }, [isInView, reduceMotion]);
+  }, [isInView, reduceMotion, targetCount]);
 
   return <section className="patient-proof" aria-label="Patients cared for" ref={sectionRef}>
     <div className="patient-proof-inner">

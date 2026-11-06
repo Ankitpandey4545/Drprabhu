@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
-const topics = [
+const topicDetails = [
   ["Ear piercing care", "Expert ENT ear piercing care"],
   ["Hearing aid solutions", "Hearing aid solutions and support"],
   ["ENT infection care", "Treatment for common ear, nose and throat infections"],
@@ -14,17 +14,29 @@ const topics = [
   ["ENT infection care", "Expert ENT infection care"],
   ["ENT consultation", "ENT specialist assessment and care"],
   ["Ear wax removal", "Safe ear wax removal by an ENT specialist"],
-].map(([title, alt], index) => ({
-  src: `/images/ent/ent-${String(index + 1).padStart(2, "0")}.jpg`,
-  alt,
-  title,
-  number: String(index + 1).padStart(2, "0"),
-}));
+];
 
-export default function EntSlider() {
+const defaultOrder = [7, 8, 9, 10, 5, 6, 1, 2, 3, 4];
+
+function getTopics(section) {
+  const order = section?.order || defaultOrder;
+  return order.map((imageNumber) => {
+  const configured = section?.items?.[imageNumber - 1];
+  const [title, alt] = topicDetails[imageNumber - 1];
+  return {
+    src: configured?.image || `/images/ent/ent-${String(imageNumber).padStart(2, "0")}.jpg`,
+    alt: configured?.alt || alt,
+    title: configured?.title || title,
+    number: String(imageNumber).padStart(2, "0"),
+  };
+});
+}
+
+export default function EntSlider({ section }) {
   const trackRef = useRef(null);
   const [activeImage, setActiveImage] = useState(1);
   const reduceMotion = useReducedMotion();
+  const topics = getTopics(section);
 
   function move(direction) {
     const track = trackRef.current;
@@ -43,7 +55,7 @@ export default function EntSlider() {
   }
 
   return <div className="ortho-gallery">
-    <div className="ortho-gallery-top"><div><span className="ortho-kicker">EAR, NOSE &amp; THROAT CARE</span><p>Explore ENT surgery &amp; care</p></div><div className="ortho-gallery-actions"><div className="carousel-controls"><motion.button type="button" disabled={activeImage <= 1} whileTap={{ scale: 0.9 }} onClick={() => move(-1)} aria-label="Previous ENT images">←</motion.button><motion.button type="button" disabled={activeImage >= topics.length} whileTap={{ scale: 0.9 }} onClick={() => move(1)} aria-label="Next ENT images">→</motion.button></div></div></div>
+    <div className="ortho-gallery-top"><div><span className="ortho-kicker">EAR, NOSE &amp; THROAT CARE</span><p>{section?.description || "Explore ENT surgery & care"}</p></div><div className="ortho-gallery-actions"><div className="carousel-controls"><motion.button type="button" disabled={activeImage <= 1} whileTap={{ scale: 0.9 }} onClick={() => move(-1)} aria-label="Previous ENT images">←</motion.button><motion.button type="button" disabled={activeImage >= topics.length} whileTap={{ scale: 0.9 }} onClick={() => move(1)} aria-label="Next ENT images">→</motion.button></div></div></div>
     <div className="ortho-track" ref={trackRef} onScroll={updateActiveImage}>
       {topics.map(({ src, alt, number, title }, index) => <motion.article className="ortho-slide" key={number}
         initial={reduceMotion ? false : { opacity: 0, y: 22 }}

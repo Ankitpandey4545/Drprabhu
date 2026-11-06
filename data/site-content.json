@@ -1,0 +1,364 @@
+{
+  "home": {
+    "brandLogo": "/images/clinic/clinic-logo.png.jpeg",
+    "doctors": [
+      {
+        "name": "Dr. Jagadish Prabhu",
+        "role": "ORTHOPAEDIC SPECIALIST",
+        "specialty": "Orthopaedic Surgeon",
+        "image": "/images/clinic/doctor-jagadish.jpeg"
+      },
+      {
+        "name": "Dr. Shilpa Prabhu",
+        "role": "ENT SPECIALIST",
+        "specialty": "ENT Surgeon",
+        "image": "/images/clinic/doctor-shilpa.jpg"
+      }
+    ],
+    "orthopaedic": {
+      "eyebrow": "CARE FOR BONES, JOINTS & MOVEMENT",
+      "title": "Orthopaedic Section",
+      "description": "Specialist care to help you move comfortably and confidently.",
+      "order": [
+        1,
+        3,
+        9,
+        8,
+        2,
+        4,
+        5,
+        6,
+        7,
+        10
+      ],
+      "items": [
+        {
+          "image": "/images/orthopaedic/ortho-01.jpg",
+          "title": "Joint replacement",
+          "alt": "Joint replacement surgery and recovery"
+        },
+        {
+          "image": "/images/orthopaedic/ortho-02.jpg",
+          "title": "Tennis elbow",
+          "alt": "Tennis elbow treatment and rehabilitation"
+        },
+        {
+          "image": "/images/orthopaedic/ortho-03.jpg",
+          "title": "Arthroscopy",
+          "alt": "Arthroscopy and minimally invasive joint care"
+        },
+        {
+          "image": "/images/orthopaedic/ortho-04.jpg",
+          "title": "Flat foot",
+          "alt": "Flat foot assessment and treatment"
+        },
+        {
+          "image": "/images/orthopaedic/ortho-05.jpg",
+          "title": "Bone health",
+          "alt": "Osteoporosis care and bone health"
+        },
+        {
+          "image": "/images/orthopaedic/ortho-06.jpg",
+          "title": "Neck pain",
+          "alt": "Neck pain assessment and treatment"
+        },
+        {
+          "image": "/images/orthopaedic/ortho-07.jpg",
+          "title": "Our expert team",
+          "alt": "Meet the orthopaedic care team"
+        },
+        {
+          "image": "/images/orthopaedic/ortho-08.jpg",
+          "title": "Frozen shoulder",
+          "alt": "Frozen shoulder care and mobility"
+        },
+        {
+          "image": "/images/orthopaedic/ortho-09.jpg",
+          "title": "Heel pain",
+          "alt": "Plantar fasciitis and heel pain care"
+        },
+        {
+          "image": "/images/orthopaedic/ortho-10.jpg",
+          "title": "Cast care",
+          "alt": "Cast application and recovery support"
+        }
+      ]
+    },
+    "ent": {
+      "eyebrow": "EAR, NOSE & THROAT SPECIALIST CARE",
+      "title": "ENT — Ear, Nose & Throat",
+      "description": "Explore common ENT procedures and specialist care.",
+      "order": [
+        7,
+        8,
+        9,
+        10,
+        5,
+        6,
+        1,
+        2,
+        3,
+        4
+      ],
+      "items": [
+        {
+          "image": "/images/ent/ent-01.jpg",
+          "title": "Ear piercing care",
+          "alt": "Expert ENT ear piercing care"
+        },
+        {
+          "image": "/images/ent/ent-02.jpg",
+          "title": "Hearing aid solutions",
+          "alt": "Hearing aid solutions and support"
+        },
+        {
+          "image": "/images/ent/ent-03.jpg",
+          "title": "ENT infection care",
+          "alt": "Treatment for common ear, nose and throat infections"
+        },
+        {
+          "image": "/images/ent/ent-04.jpg",
+          "title": "Vertigo treatment",
+          "alt": "Specialist care for vertigo and balance"
+        },
+        {
+          "image": "/images/ent/ent-05.jpg",
+          "title": "Allergy treatment",
+          "alt": "ENT allergy care and treatment"
+        },
+        {
+          "image": "/images/ent/ent-06.jpg",
+          "title": "Complete ENT care",
+          "alt": "ENT care and specialist services"
+        },
+        {
+          "image": "/images/ent/ent-07.jpg",
+          "title": "ENT services",
+          "alt": "ENT services for the whole family"
+        },
+        {
+          "image": "/images/ent/ent-08.jpg",
+          "title": "ENT infection care",
+          "alt": "Expert ENT infection care"
+        },
+        {
+          "image": "/images/ent/ent-09.jpg",
+          "title": "ENT consultation",
+          "alt": "ENT specialist assessment and care"
+        },
+        {
+          "image": "/images/ent/ent-10.jpg",
+          "title": "Ear wax removal",
+          "alt": "Safe ear wax removal by an ENT specialist"
+        }
+      ]
+    },
+    "facilities": [
+      {
+        "eyebrow": "IN-HOUSE FACILITY",
+        "title": "We have in-house - Digital X-ray facility",
+        "image": "/images/x.jpg",
+        "alt": "Digital X-ray machine at the clinic"
+      },
+      {
+        "eyebrow": "ENT SERVICES",
+        "title": "ENT throat endoscopy services",
+        "image": "/images/ent.jpg",
+        "alt": "ENT throat endoscopy service"
+      }
+    ],
+    "video": {
+      "title": "Clinic Video",
+      "description": "Watch a video from Dr. Prabhu Orthopaedic & ENT Centre.",
+      "videoPath": "",
+      "posterImage": ""
+    },
+    "physio": {
+      "title": "Home Physiotherapy",
+      "description": "Physiotherapy videos and guidance from our clinic.",
+      "videos": [
+        {
+          "title": "Home Physiotherapy video",
+          "description": "",
+          "videoPath": "",
+          "posterImage": ""
+        }
+      ]
+    }
+  },
+  "contact": {
+    "address": "77/80, 2nd Main Road, Kothnur Dinne Main Road,\nnear Keerthi Convention Hall, Rajathadri Layout,\n8th Phase, J.P. Nagar, Bengaluru 560076",
+    "mapCoordinates": "12.873400,77.583298",
+    "appointmentPhone": "+91 70196 79451",
+    "appointmentPhoneLink": "+917019679451",
+    "whatsappPhone": "+91 90197 64235",
+    "whatsappLink": "919019764235",
+    "entPhone": "+91 74831 08995",
+    "entPhoneLink": "+917483108995",
+    "email": "drprabhuclinic@gmail.com",
+    "orthopaedicMorning": "09:45 AM – 1:30 PM",
+    "orthopaedicEvening": "4:45 PM – 8:30 PM",
+    "sundayHours": "10:00 AM – 12:00 PM",
+    "locationQrPath": "/images/Qr.jpg"
+  },
+  "doctors": {
+    "jagadish": {
+      "name": "Dr. Jagadish Prabhu",
+      "qualifications": [
+        "FRCS (Orth & Tr) (UK)",
+        "MS (Orthopaedics)",
+        "DNB (Orthopaedics)",
+        "D.Ortho",
+        "FHMS",
+        "MBBS"
+      ],
+      "image": "/images/clinic/doctor-jagadish.jpeg",
+      "fullTitle": "Sr. Consultant Orthopaedic Surgeon",
+      "highlights": [
+        [
+          "17+",
+          "Years of clinical experience"
+        ],
+        [
+          "FRCS (UK)",
+          "International professional qualification"
+        ],
+        [
+          "ADVANCED",
+          "Orthopaedic surgical practice"
+        ]
+      ],
+      "aboutHeading": "Advanced orthopaedic care, grounded in experience.",
+      "biography": [
+        "Dr. Jagadish Prabhu is a highly qualified and experienced Consultant Orthopaedic Surgeon with over 17 years of clinical experience in the field of orthopaedics and musculoskeletal healthcare. He is distinguished by his advanced professional qualifications, extensive clinical experience and unwavering commitment to delivering comprehensive, evidence-based orthopaedic care.",
+        "His academic and professional credentials include FRCS (Orth & Tr) (UK), MS (Orthopaedics), DNB (Orthopaedics), D.Ortho, FHMS and MBBS, reflecting a strong foundation in orthopaedic surgery and advanced specialist training.",
+        "With a patient-centred approach to clinical practice, Dr. Jagadish Prabhu places particular emphasis on accurate diagnosis, individualised treatment planning and optimal functional recovery. He believes that effective orthopaedic care extends beyond treating the condition itself, focusing equally on restoring mobility, relieving pain, preserving joint function and enhancing overall quality of life.",
+        "Through his private practice at Dr. Prabhu Orthopaedic and ENT Centre, J.P. Nagar – 8th Phase, Bengaluru, he is committed to providing personalised, ethical and comprehensive orthopaedic healthcare in a professional and compassionate clinical environment.",
+        "In addition to his private clinical practice, Dr. Jagadish Prabhu performs orthopaedic surgical procedures at reputed, premier corporate hospitals across South Bengaluru, utilising state-of-the-art surgical infrastructure, advanced medical technology and comprehensive multidisciplinary healthcare facilities.",
+        "His practice combines personalised patient care with the clinical expertise and advanced surgical capabilities of leading tertiary-care institutions.",
+        "His philosophy of care is founded on three essential principles: clinical excellence, ethical medical practice and patient satisfaction. He strives to ensure that every patient receives the highest standards of professional attention, clear communication and treatment tailored to their individual needs.",
+        "His ultimate goal is to help patients overcome musculoskeletal challenges, regain mobility and return to an active, independent and fulfilling life."
+      ],
+      "qualificationIntro": "International training and advanced orthopaedic surgical practice, with care shaped around each patient.",
+      "practice": "Private practice at Dr. Prabhu Orthopaedic and ENT Centre, J.P. Nagar – 8th Phase, Bengaluru, and orthopaedic surgical practice at leading corporate hospitals across South Bengaluru.",
+      "approach": "Accurate diagnosis · Individualised treatment planning · Functional recovery · Ethical, patient-centred care"
+    },
+    "shilpa": {
+      "name": "Dr. Shilpa Prabhu",
+      "title": "Senior Consultant ENT Surgeon",
+      "experience": "14 Years of Clinical Experience",
+      "qualifications": [
+        "FRCS (ENT) (UK)",
+        "MRCS-ENT",
+        "DLO",
+        "DNB (ENT)",
+        "MBBS"
+      ],
+      "image": "/images/clinic/doctor-shilpa.jpg",
+      "biography": "Dr. Shilpa Prabhu is a highly experienced Senior Consultant ENT Surgeon with 14 years of clinical experience in the comprehensive diagnosis and management of Ear, Nose and Throat conditions.\n\nWith extensive clinical expertise and a patient-centred approach, she is committed to delivering high-quality, ethical and evidence-based ENT care. She believes in providing accurate diagnosis, effective treatment and personalised attention to every patient, ensuring comfort and confidence throughout their treatment journey.\n\nShe practises at Dr. Prabhu Orthopaedic and ENT Centre, J.P. Nagar 8th Phase, Bengaluru, and is also involved in providing specialised ENT care and procedures.",
+      "expertise": [
+        {
+          "title": "Ear, Nose and Throat Infections",
+          "description": "Diagnosis and comprehensive management of common and complex ENT infections."
+        },
+        {
+          "title": "Ear Wax Removal",
+          "description": "Safe and professional ear wax removal procedures."
+        },
+        {
+          "title": "Ear Piercing",
+          "description": "Professional ear piercing services."
+        },
+        {
+          "title": "Ear Lobe Repair",
+          "description": "Management and repair of torn or split ear lobes."
+        },
+        {
+          "title": "Vertigo and Balance Disorders",
+          "description": "Evaluation and management of dizziness, vertigo and balance-related problems."
+        },
+        {
+          "title": "Tinnitus Management",
+          "description": "Assessment and treatment guidance for ringing or buzzing sensations in the ears."
+        },
+        {
+          "title": "Snoring Disorders",
+          "description": "Evaluation and management of snoring-related ENT conditions."
+        },
+        {
+          "title": "Foreign Body Removal",
+          "description": "Safe removal of foreign bodies from the ear, nose and throat."
+        }
+      ],
+      "philosophy": "Dr. Shilpa Prabhu strongly believes in combining clinical expertise with compassionate, individualised patient care. Her focus is on providing appropriate treatment, patient education and long-term ENT health through ethical and evidence-based medical practice.",
+      "tagline": "Expertise in ENT Care. Compassion in Every Consultation."
+    }
+  },
+  "faqs": [
+    {
+      "question": "What care can I ask about at the centre?",
+      "answer": "The centre focuses on orthopaedic and ENT care. The doctor can discuss which evaluation or treatment is suitable for your concern during a consultation."
+    },
+    {
+      "question": "How do I book an appointment?",
+      "answer": "Use the contact details in the footer to call the centre and ask about available appointment times."
+    },
+    {
+      "question": "What should I bring to my first visit?",
+      "answer": "Bring any previous prescriptions, test results, scans or X-rays related to your concern, along with a list of medicines you currently take."
+    },
+    {
+      "question": "Should I bring previous X-rays or scans?",
+      "answer": "Yes. Previous imaging and reports can help the doctor understand your history. Bring the original files or clear copies if you have them."
+    },
+    {
+      "question": "How should I prepare for an ENT consultation?",
+      "answer": "Make a note of your symptoms, when they began, how often they happen, and any treatment you have already tried."
+    },
+    {
+      "question": "Can I ask the doctor about treatment options during the visit?",
+      "answer": "Yes. You can discuss your concerns, possible options, expected follow-up and any questions you have with the doctor."
+    }
+  ],
+  "fees": [
+    {
+      "doctor": "Dr. Jagadish Prabhu",
+      "specialty": "Orthopaedic Surgeon",
+      "firstVisit": "₹550",
+      "followUps": [
+        [
+          "1–4 days",
+          "Nil"
+        ],
+        [
+          "5–9 days",
+          "₹400"
+        ],
+        [
+          "After 9 days",
+          "₹550"
+        ]
+      ]
+    },
+    {
+      "doctor": "Dr. Shilpa Prabhu",
+      "specialty": "ENT Surgeon",
+      "firstVisit": "₹400",
+      "followUps": [
+        [
+          "1–4 days",
+          "Nil"
+        ],
+        [
+          "5–9 days",
+          "₹300"
+        ],
+        [
+          "After 9 days",
+          "₹400"
+        ]
+      ]
+    }
+  ],
+  "patientCount": 20138
+}
